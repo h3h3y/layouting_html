@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uts</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <header>
+          <div id="btn"></div>
+          <button type="button" class="toogle-button1" onclick="matkul()">
+            Matkul
+          </button>
+          <button type="button" class="toogle-button2" onclick="profil()">
+            Profil
+          </button>
+          <button type="button" class="toogle-button3" onclick="program()">
+            Program
+          </button>
+        </header>
+
+        <section class="group" id="makul">
+          <div class="box-content">
+            <p class="title"><b>Tentang Makul</b></p>
+            <p class="title"><b>Pemrograman Berbasis Web I</b></p>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+              nemo quisquam tempora perferendis ad vitae dolore sunt non ex,
+              ipsum magni provident! Atque adipisci reiciendis quibusdam,
+              inventore aperiam asperiores necessitatibus?
+            </p>
+
+            <p>1. HTML</p>
+            <p>2. CSS</p>
+            <p>3. JavaScript</p>
+            <p>4. PHP</p>
+          </div>
+        </section>
+
+        <section class="group" id="profil">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/147/147144.png?w=360"
+            alt="img"
+          />
+          <div class="box-content2">
+            <p class="title"><b>Ujian Tengah Semester</b></p>
+            <p class="title"><b>Pemrograman Berbasis Web I</b></p>
+            <p>NIM : 22.240.0080</p>
+            <p>Nama : Iwan Sanusi</p>
+            <p>Kelas : 2P43</p>
+          </div>
+        </section>
+
+        <section class="group" id="program">
+          <div class="box-content">
+            <p class="title"><b>Program Menghitung Bangun Ruang</b></p>
+            <p class="title"><b>Volume dan Luas Permukaan Tabung</b></p>
+
+            <div class="form-box">
+              <form onsubmit="return false">
+                <table>
+                  <tr>
+                    <td><label>Jari Jari</label></td>
+                    <td>:</td>
+                    <td>
+                      <input
+                        type="number"
+                        class="input"
+                        id="jari"
+                        placeholder="Cm"
+                        required
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><label>Tinggi</label></td>
+                    <td>:</td>
+                    <td>
+                      <input
+                        type="number"
+                        class="input"
+                        id="tinggi"
+                        placeholder="Cm"
+                        required
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><label>Volume</label></td>
+                    <td>:</td>
+                    <td>
+                      <input type="text" class="input" id="volume" disabled />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><label>Luas Permukaan</label></td>
+                    <td>:</td>
+                    <td>
+                      <input
+                        type="text"
+                        class="input"
+                        id="luaspermukaan"
+                        disabled
+                      />
+                    </td>
+                  </tr>
+                </table>
+                <input
+                  class="btn-submit"
+                  type="submit"
+                  value="HITUNG"
+                  onclick="count()"
+                />
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <footer>
+          <div class="footer-box">
+            <p>copyright @2023 - 22.240.0080-iwan</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      // var untuk navbar
+      var makulMenu = document.getElementById("makul");
+      var profilMenu = document.getElementById("profil");
+      var programMenu = document.getElementById("program");
+
+      function count() {
+        // var untuk get input
+        let getjari = document.getElementById("jari").value;
+        let gettinggi = document.getElementById("tinggi").value;
+
+        //   var untuk menhitung
+        let count_volume = (1 / 3) * Math.PI * getjari * getjari * gettinggi;
+        let count_luas = 2 * Math.PI * getjari * (getjari + gettinggi);
+        if (getjari && gettinggi != "") {
+          document.getElementById("volume").value = count_volume.toFixed(2);
+          document.getElementById("luaspermukaan").value =
+            count_luas.toFixed(2);
+          return true;
+        } else {
+          alert("Inputan Tidak Boleh Kosong");
+        }
+      }
+
+      function matkul() {
+        makulMenu.style.left = "30px";
+        profilMenu.style.left = "450px";
+        programMenu.style.left = "900px";
+      }
+
+      function profil() {
+        makulMenu.style.left = "-450px";
+        profilMenu.style.left = "30px";
+        programMenu.style.left = "450px";
+      }
+
+      function program() {
+        makulMenu.style.left = "-900px";
+        profilMenu.style.left = "-450px";
+        programMenu.style.left = "30px";
+      }
+    </script>
+  </body>
+</html>

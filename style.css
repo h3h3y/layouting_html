@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.box {
+  height: 590px;
+  width: 380px;
+  position: relative;
+  margin: 3% auto;
+  padding: 6px;
+  border: solid 2px black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+header {
+  width: 230px;
+  margin: 20px auto;
+  position: relative;
+  border-radius: 30px;
+  border: 3px solid black;
+}
+
+.toogle-button1 {
+  padding: 10px 15px;
+  cursor: pointer;
+  background: transparent;
+  border-right: 5px solid black;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  position: relative;
+  outline: none;
+}
+.toogle-button2 {
+  padding: 10px 15px;
+  cursor: pointer;
+  background: transparent;
+  border-right: 5px solid black;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  position: relative;
+  outline: none;
+}
+.toogle-button3 {
+  padding: 10px 15px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  position: relative;
+  outline: none;
+}
+
+.group {
+  height: 590px;
+  width: 340px;
+  transition: 0.5s;
+  position: absolute;
+  left: 7.5%;
+}
+
+.group > img {
+  width: 150px;
+  height: 150px;
+  border: 5px solid black;
+  border-radius: 50%;
+}
+
+.box-content2 {
+  padding-top: 10px;
+}
+
+#profil {
+  left: 450px;
+}
+#program {
+  left: 900px;
+}
+
+section {
+  text-align: center;
+  margin: auto;
+  width: 280px;
+  top: 180px;
+  transition: 0.5s;
+}
+
+.form-box {
+  padding-top: 15px;
+}
+
+.form-box tr {
+  margin: 5px;
+}
+
+table {
+  padding-bottom: 30px;
+}
+
+.input {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid gray;
+  height: 25px;
+  margin: 4px;
+}
+
+.btn-submit {
+  height: 30px;
+  width: 100px;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+footer {
+  position: absolute;
+  padding: 7px 0;
+  width: 100%;
+  left: 50%;
+  bottom: 0;
+}
+
+.footer-box {
+  position: relative;
+  left: -30%;
+}
